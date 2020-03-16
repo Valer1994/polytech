@@ -1,7 +1,12 @@
 .form_block {
   display:flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  height: calc(100vh - 200px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 20px;
     .BusyLoader {
       width: 100%;
       max-width: 650px;
@@ -41,16 +46,16 @@
     }
   }
 
-  @media screen and (max-width: 550px){
-    .form_block{
-      .BusyLoader{
-        width: 90%;
-        .image-block {
-          h1{
-            text-align: center;
-            font-size: 20px;
-          }
+@media screen and (max-width: 550px){
+  .form_block{
+    .BusyLoader{
+      width: 90%;
+      .image-block {
+        h1{
+          text-align: center;
+          font-size: 20px;
         }
       }
     }
   }
+}

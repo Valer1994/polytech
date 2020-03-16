@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 
 import Login from '../../containers/Login';
 
-const mapStateToProps = ({ login }) => ({ login });
+const mapStateToProps = ({ systemLogin }) => ({ systemLogin });
 
 const Autorize = ({
-  login,
+  systemLogin,
   children,
 }) => {
 
   useEffect(() => {
-    if(login) {
-      window.localStorage.setItem('token', login.data.token);
+    if(systemLogin) {
+      window.localStorage.setItem('token', systemLogin);
     }
-  },[login]);
+  },[systemLogin]);
 
-  return login || window.localStorage.getItem('token')
+  return systemLogin || window.localStorage.getItem('token')
   ? children
   : <Login/>
 };

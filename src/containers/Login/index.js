@@ -7,17 +7,19 @@ import {
   Button,
   TextField,
   BusyLoader,
-} from '../../components';
+} from 'components';
 
-import { loginToAdmin } from '../../actions/user';
+import { loginToSystem } from 'actions/login';
+
+import { politecLogoBg } from 'assets';
 
 import './style.scss';
 
-const mapStateToProps = ({ login }) => ({ login });
+const mapStateToProps = ({ systemLogin }) => ({ systemLogin });
 
 const Login = ({
-  login,
-  loginToAdmin,
+  systemLogin,
+  loginToSystem,
 }) => {
 
   const [filter, setFilter] = useState({ email: null, password: null });
@@ -29,14 +31,15 @@ const Login = ({
 
   const onSave = () => {
     setIsBusy(true);
-    //loginToAdmin(filter);
-    window.localStorage.setItem('token', 'usanox')
+    setTimeout(() => {
+      loginToSystem(true);
+    }, 2000);
   };
 
   return (
     <Paper>
       <Header />
-      <Paper className='form_block'>
+      <Paper className='form_block' style={{ backgroundImage: `url(${politecLogoBg})` }}>
         <BusyLoader isBusy={isBusy}>
           <Paper className="image-block">
             <h1>{"Մուտք օնլայն ուսուցման համակարգ"}</h1>
@@ -66,5 +69,5 @@ const Login = ({
 };
 
 export default connect(mapStateToProps, {
-  loginToAdmin
+  loginToSystem
 })(Login);

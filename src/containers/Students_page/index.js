@@ -18,8 +18,8 @@ const Students = ({
 }) => {
 
     return (
-        <Paper>
-        <Paper className='studentContainer'> 
+        <Paper className="Students">
+        <Paper className='studentContainer'>
             <Paper>
                 <ImageUploader />
             </Paper>
