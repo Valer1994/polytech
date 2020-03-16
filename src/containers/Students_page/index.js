@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 
 import { NavLink } from 'react-router-dom';
 
-import { useTranslator } from '../../utils/translator';
-
 import {
     Paper,
     Button,
@@ -13,13 +11,11 @@ import {
 
 import './style.scss';
 
-const mapStateToProps = ({ data} ) => ({ data });
+const mapStateToProps = ({ data } ) => ({ data });
 
 const Students = ({
     data
 }) => {
-
-    const { t } = useTranslator();
 
     return (
         <Paper>
@@ -79,7 +75,7 @@ const Students = ({
             </Paper>
         </Paper>
         <NavLink to='/video'>
-            <Button>{t('_Video_')}</Button>
+            <Button>Video</Button>
         </NavLink>
         {/* <Video /> */}
         </Paper>
