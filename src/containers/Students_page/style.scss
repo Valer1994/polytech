@@ -1,0 +1,32 @@
+.studentContainer {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../assets/polytechnic_logo_background_am.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .studentDataContainer{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 20px;
+        .studentDataLabel{
+            display: flex;
+            justify-content: flex-start;
+            color: #878991;
+            font-weight: 400;
+            margin: 5px;
+            font-size: 17px;
+        }
+        .studentData{
+            min-width: 110px;
+            border-radius: 4px;
+            border: 2px solid #dde2ec;
+            color: #495057;
+            font-weight: 500;
+            padding:  10px 20px;
+            font-size: 20px;
+        }
+    }
+}
