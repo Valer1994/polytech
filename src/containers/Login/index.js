@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import {
   Paper,
-  Modal,
   Header,
   Button,
   TextField,
@@ -30,7 +29,8 @@ const Login = ({
 
   const onSave = () => {
     setIsBusy(true);
-    loginToAdmin(filter);
+    //loginToAdmin(filter);
+    window.localStorage.setItem('token', 'usanox')
   };
 
   return (
@@ -39,7 +39,7 @@ const Login = ({
       <Paper className='form_block'>
         <BusyLoader isBusy={isBusy}>
           <Paper className="image-block">
-            <h1>{"Մուտք ուսանողի էջ"}</h1>
+            <h1>{"Մուտք օնլայն ուսուցման համակարգ"}</h1>
           </Paper>
           <Paper className="autorize-block" flexName="flexible vertical aCenter">
             <TextField

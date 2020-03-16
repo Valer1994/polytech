@@ -1,12 +1,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { 
+import {
   Main,
   Page,
-} from '../src/components';
+} from 'components';
 
-import './App.css';
+import 'sass/animate.scss';
+import 'sass/main.scss';
+import 'sass/media.scss';
+import 'sass/feather-icon.scss';
+
 function App() {
   return (
     <div className="App">
