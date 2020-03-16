@@ -1,0 +1,160 @@
+.Button {
+    min-width: 100px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight:400;
+    border: 2px solid;
+    color: #fff;
+    background-color: #11a8ba;
+    border-color: #11a8ba;
+    cursor: pointer;
+    outline: none;
+    &:disabled{
+        background-color: rgba(17, 168, 186, 0.5);
+        border-color:  rgba(17, 168, 186, 0.1);
+        &:hover{
+            cursor: not-allowed;
+            background-color: rgba(17, 168, 186, 0.5);
+            border-color:  rgba(17, 168, 186, 0.1);
+        }
+    }
+    &:hover{
+        background-color: #0ca1b3;
+        border-color: #0ca1b3;
+    }
+    &.outlineButtonPrimary{
+        background-color: transparent;
+        color: #11a8ba;
+        border-color: #11a8ba;
+        &:hover{
+            background-color: #11a8ba;
+            color: #fff;
+            border: 2px solid #0ca1b3;
+        }
+    }
+    &.btn-secondary{
+        background-color: #292b2c;
+        border-color: #292b2c;
+        &:hover{
+            background-color: #171818;;
+            border-color: #171818;;
+        }
+    }
+    &.outlineButtonSecondary{
+        background-color: transparent;
+        color: #292b2c;
+        border-color: #292b2c;
+        &:hover{
+            background-color: #292b2c;
+            color: #fff;
+        }
+    }
+    &.btn-success{
+        background-color: #24b314;
+        border-color: #24b314;
+        &:hover{
+            background-color: #1d9110;
+            border-color: #1b850f;
+        }
+    }
+    &.outlineButtonSuccess{
+        background-color: transparent;
+        color: #24b314;
+        border-color: #24b314;
+        &:hover{
+            background-color: #24b314;
+            color: #fff;
+        }
+    }
+    &.btn-info{
+        color: #000;
+        background-color: #5bc0de;
+        border-color: #5bc0de;
+        &:hover{
+            color: #fff;
+            background-color: #3bb4d8;
+            border-color: #31b0d5;
+        }
+    }
+    &.outlineButtonInfo{
+        color: #5bc0de;
+        background-color: transparent;
+        border-color: #5bc0de;
+        &:hover{
+            background-color: #5bc0de;
+            color: #000;
+        }
+    }
+    &.btn-warning{
+        color: #292b2c;
+        background-color: #fbe4a0;
+        border-color: #fbe4a0;
+        &:hover{
+            background-color: #f9da7b;
+            border-color: #f9d66f;
+        }
+    }
+    &.outlineButtonWarning{
+        color: #fbe4a0;
+        background-color: transparent;
+        background-image: none;
+        border-color: #fbe4a0;
+        &:hover{
+            color: #292b2c;
+            background-color: #fbe4a0;
+            border-color: #fbe4a0;
+        }
+    }
+    &.btn-danger{
+        color: #fff;
+        background-color: #e65252;
+        border-color: #e65252;
+        &:hover{
+            background-color: #e13131;
+            border-color: #e02525;
+        }
+    }
+    &.outlineButtonDanger{
+        color: #e65252;
+        background-color: transparent;
+        border-color: #e65252;
+        &:hover{
+            color: #fff;
+            background-color: #e65252;
+            border-color: #e65252;
+        }
+    }
+    &.btn-white{
+        color: #11a8ba;
+        background-color: #fff;
+        border-color: #fff;
+        &:hover{
+            color: #0ca1b3;
+            background-color: #ececec;
+            border-color: #e6e5e5;
+        }
+    }
+    &.btn-link {
+        color: #047bf8;
+        background-color: transparent;
+        border: 2px solid transparent;
+        &:hover{
+            color: #0356ad;
+            text-decoration: underline;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+    &.largeButton{
+        padding: 8px 16px;
+        font-size: 17px;
+    }
+    &.smallButton{
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    &.roundedBorder{
+        border-radius: 40px;
+    }
+}
