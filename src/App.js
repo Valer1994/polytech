@@ -1,5 +1,7 @@
 import React from 'react';
 import Login from '../src/containers/Login';
+import { Video } from '../src/components';
+import Students from '../src/containers/Students_page';
 
 import { Route } from 'react-router-dom';
 
@@ -9,7 +11,8 @@ function App() {
     <div className="App">
         <Route exact path='/'/>
         <Route exact path='/'/>
-        <Login />
+        <Route path='/video' component={Video} />
+        <Students />
     </div>
   );
 }

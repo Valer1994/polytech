@@ -2,5 +2,10 @@
     "_SignIn_": "Sign In",
     "_Password_": "Password",
     "_Username_": "User Name",
-    "_Entrance_": "Entrance"
+    "_Entrance_": "Entrance",
+    "_Name_": "Name",
+    "_Surname_": "Surname",
+    "_FatherName_": "Father name",
+    "_EMail_": "E-mail",
+    "_PhoneNumber_": "Phone number"
 }
