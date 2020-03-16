@@ -20,6 +20,7 @@ const Header = ({ withLogOut }) => {
       <Paper className='header_content'>
         <img src={logo} alt=""/>
         <p>Հայաստանի ազգային պոլիտեխնիկական համալսարան</p>
+        <p>Առցանց ուսումնական հարթակ</p>
       </Paper>
       {withLogOut &&
         <Paper

@@ -5,16 +5,39 @@
   background-size: contain;
   background-image: url('../../assets/polytechnic_logo_background_am.png');
   padding: 20px;
+  overflow-y: auto;
+  .documents-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    h3 {
+      margin-bottom: 20px;
+    }
+    a {
+      margin-bottom: 10px;
+      &:hover {
+        color: #011B38;
+      }
+      .Icon {
+        margin-left: 5px;
+      }
+    }
+  }
   .studentContainer {
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
       .studentDataContainer{
-          width: 50%;
           display: flex;
           align-items: center;
           justify-content: space-around;
           flex-wrap: wrap;
           margin: 20px;
+          .key-value {
+            padding: 10px;
+          }
           .studentDataLabel{
               display: flex;
               justify-content: flex-start;
@@ -29,9 +52,15 @@
               border: 2px solid #dde2ec;
               color: #495057;
               font-weight: 500;
-              padding:  10px 20px;
+              padding: 5px 10px;
               font-size: 20px;
           }
       }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .Students {
+    height: 100%;
   }
 }

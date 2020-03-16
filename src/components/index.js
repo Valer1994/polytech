@@ -10,6 +10,7 @@ import TextField from '../components/moleculs/textField';
 import Main from '../components/organizms/Main';
 import Page from '../components/organizms/Page';
 import Header from '../components/organizms/Header';
+import Footer from '../components/organizms/Footer';
 import BusyLoader  from '../components/organizms/BusyLoader';
 import ImageUploader from '../components/organizms/ImageUploader';
 
@@ -23,9 +24,9 @@ export {
     Video,
     Button,
     Header,
+    Footer,
     Avatar,
     TextField,
     BusyLoader,
     ImageUploader,
 };
-

@@ -1,4 +1,6 @@
 .videoContainer{
+  display: flex;
+  justify-content: center;
     iframe{
         width: 60%;
         height: 350px;

@@ -1,84 +1,105 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { NavLink } from 'react-router-dom';
 
 import {
-    Paper,
-    Button,
-    ImageUploader,
-} from '../../components';
+  Icon,
+  Paper,
+  ImageUploader,
+} from 'components';
 
 import './style.scss';
 
 const mapStateToProps = ({ data } ) => ({ data });
 
 const Students = ({
-    data
+  data
 }) => {
 
+  const handleImageChange = (file) => {
+    console.log(file);
+  };
+
     return (
-        <Paper className="Students">
+      <Paper className="Students">
         <Paper className='studentContainer'>
-            <Paper>
-                <ImageUploader />
-            </Paper>
-            <Paper className='studentDataContainer'>
-                <Paper>
+          <Paper>
+              <ImageUploader
+                onChange={handleImageChange}
+              />
+          </Paper>
+          <Paper className='studentDataContainer'>
+              <Paper flexName="flexible aCenter wrap jCenter">
+                <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Անուն</span>
                     </Paper>
                     <Paper className='studentData'>
-                        <span>Valod</span>
+                        <span>Գուրգեն</span>
                     </Paper>
                 </Paper>
-                <Paper>
+                <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Ազգանուն</span>
                     </Paper>
                     <Paper className='studentData'>
-                        <span>Valodyan</span>
+                        <span>Ստեփանյան</span>
                     </Paper>
                 </Paper>
-                <Paper>
+                <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Հայրանուն</span>
                     </Paper>
                     <Paper className='studentData'>
-                        <span>Valodi</span>
+                        <span>Վարդանի</span>
                     </Paper>
                 </Paper>
-                <Paper>
+              </Paper>
+
+              <Paper flexName="flexible aCenter wrap jCenter">
+                <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Խումբ</span>
                     </Paper>
                     <Paper className='studentData'>
-                        <span>խմբակ</span>
+                        <span>Կ218</span>
                     </Paper>
                 </Paper>
-                <Paper>
+                <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Էլեկտրոնային հասցե</span>
                     </Paper>
                     <Paper className='studentData'>
-                        <span>ValodyanValod@gmail.com</span>
+                        <span>stepanyangurgen@gmail.com</span>
                     </Paper>
                 </Paper>
-                <Paper>
+                <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Հեռախոսահամար</span>
                     </Paper>
                     <Paper className='studentData'>
-                        <span>077777777</span>
+                        <span>+37498303209</span>
                     </Paper>
                 </Paper>
-            </Paper>
+              </Paper>
+          </Paper>
         </Paper>
-        <NavLink to='/video'>
-            <Button>Video</Button>
-        </NavLink>
-        {/* <Video /> */}
+        <Paper className="documents-list">
+          <h3>Օնլայն դասընթացների տեսանյութեր</h3>
+          <NavLink to="/details" className="flexible aCenter">
+            Գծային Հանրահաշիվ
+            <Icon className="icon-feather-external-link" />
+          </NavLink>
+          <NavLink to="/details" className="flexible aCenter">
+            Ինֆորմատիկա
+            <Icon className="icon-feather-external-link" />
+          </NavLink>
+          <NavLink to="/details" className="flexible aCenter">
+            Կիրառական Մեխանիկա
+            <Icon className="icon-feather-external-link" />
+          </NavLink>
         </Paper>
+      </Paper>
     )
 };
 

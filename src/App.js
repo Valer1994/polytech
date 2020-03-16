@@ -1,15 +1,13 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { Video } from 'components';
-
 import Students from 'containers/Students_page';
+import Details from 'containers/Details';
 
 import {
-  Main,
-  Page,
   Paper,
   Header,
+  Footer,
 } from 'components';
 
 import 'sass/animate.scss';
@@ -20,9 +18,9 @@ import 'sass/feather-icon.scss';
 const App = () => (
   <Paper className="App">
     <Header withLogOut/>
-    <Route exact path='/' component={Main}/>
-    <Route path='/students' component={Students}/>
-    <Route path='/video' component={Video} />
+    <Route exact path='/' component={Students}/>
+    <Route path='/details' component={Details} />
+    <Footer/>
   </Paper>
 );
 
