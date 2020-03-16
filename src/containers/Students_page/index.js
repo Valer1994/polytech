@@ -1,15 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { NavLink } from 'react-router-dom';
+
 import { useTranslator } from '../../utils/translator';
 
-import Paper from '../../components/atoms/Paper';
-import Video from '../../components/atoms/Video';
-import Button from '../../components/atoms/Button';
-import ImageUploader from '../../components/organizms/ImageUploader';
+import {
+    Paper,
+    Button,
+    ImageUploader,
+} from '../../components';
 
 import './style.scss';
-import { NavLink } from 'react-router-dom';
 
 const mapStateToProps = ({ data} ) => ({ data });
 
@@ -18,10 +20,6 @@ const Students = ({
 }) => {
 
     const { t } = useTranslator();
-
-    const routeChange = () => {
-
-    }
 
     return (
         <Paper>
@@ -32,7 +30,7 @@ const Students = ({
             <Paper className='studentDataContainer'>
                 <Paper>
                     <Paper className='studentDataLabel'>
-                        <span>{t('_Name_')}</span>
+                        <span>Անուն</span>
                     </Paper>
                     <Paper className='studentData'>
                         <span>Valod</span>
@@ -40,7 +38,7 @@ const Students = ({
                 </Paper>
                 <Paper>
                     <Paper className='studentDataLabel'>
-                        <span>{t('_Surname_')}</span>
+                        <span>Ազգանուն</span>
                     </Paper>
                     <Paper className='studentData'>
                         <span>Valodyan</span>
@@ -48,7 +46,7 @@ const Students = ({
                 </Paper>
                 <Paper>
                     <Paper className='studentDataLabel'>
-                        <span>{t('_FatherName_')}</span>
+                        <span>Հայրանուն</span>
                     </Paper>
                     <Paper className='studentData'>
                         <span>Valodi</span>
@@ -56,7 +54,15 @@ const Students = ({
                 </Paper>
                 <Paper>
                     <Paper className='studentDataLabel'>
-                        <span>{t('_EMail_')}</span>
+                        <span>Խումբ</span>
+                    </Paper>
+                    <Paper className='studentData'>
+                        <span>խմբակ</span>
+                    </Paper>
+                </Paper>
+                <Paper>
+                    <Paper className='studentDataLabel'>
+                        <span>Էլեկտրոնային հասցե</span>
                     </Paper>
                     <Paper className='studentData'>
                         <span>ValodyanValod@gmail.com</span>
@@ -64,7 +70,7 @@ const Students = ({
                 </Paper>
                 <Paper>
                     <Paper className='studentDataLabel'>
-                        <span>{t('_PhoneNumber_')}</span>
+                        <span>Հեռախոսահամար</span>
                     </Paper>
                     <Paper className='studentData'>
                         <span>077777777</span>

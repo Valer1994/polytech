@@ -15,11 +15,11 @@ import './index.css';
 ReactDOM.render(
     <Provider store={store}>
         <TranslatorProvider>
-            <Autorize>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
-            </Autorize>
+                <Autorize>
+                    <BrowserRouter>
+                        <App />
+                    </BrowserRouter>
+                </Autorize>
         </TranslatorProvider>
     </Provider>
     , document.getElementById('root'));

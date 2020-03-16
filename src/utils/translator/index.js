@@ -14,7 +14,7 @@ const TranslatorContext = createContext();
 const TranslatorProvider = ({ children }) => {
 
   const [translations, setTranslations] = useState({});
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('arm');
 
   const loadTranslations = useCallback(async lang => {
     const result = await Fetch.get(`/translations/resources_${lang}.json`);

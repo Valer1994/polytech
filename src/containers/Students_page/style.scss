@@ -1,6 +1,9 @@
 .studentContainer {
     display: flex;
     justify-content: center;
+    background-image: url('../../assets/polytechnic_logo_background_am.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     .studentDataContainer{
         width: 50%;
         display: flex;

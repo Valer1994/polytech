@@ -1,0 +1,25 @@
+.Header{
+    display: fixed;
+    top: 0;
+    background-color: #011B38;
+    width: 100%;
+    height: 200px;
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #002147, #001e40, #001b38, #001831, #00142a);
+    .header_content{
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+       
+        img{
+            width: 140px;
+            height: 40px;
+        }
+        p{
+            color:white;
+            text-align: center;
+        }
+    }
+}
