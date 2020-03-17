@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 
 import {
-  Icon,
   Paper,
+  Dropdown,
   ImageUploader,
 } from 'components';
 
@@ -29,7 +29,7 @@ const Students = ({
               />
           </Paper>
           <Paper className='studentDataContainer'>
-              <Paper flexName="flexible aCenter wrap jCenter">
+              <Paper flexName="flexible aCenter wrap">
                 <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Անուն</span>
@@ -56,7 +56,7 @@ const Students = ({
                 </Paper>
               </Paper>
 
-              <Paper flexName="flexible aCenter wrap jCenter">
+              <Paper flexName="flexible aCenter wrap">
                 <Paper className="key-value">
                     <Paper className='studentDataLabel'>
                         <span>Խումբ</span>
@@ -84,20 +84,64 @@ const Students = ({
               </Paper>
           </Paper>
         </Paper>
-        <Paper className="documents-list">
-          <h3>Օնլայն դասընթացների տեսանյութեր</h3>
-          <NavLink to="/details" className="flexible aCenter">
-            Գծային Հանրահաշիվ
-            <Icon className="icon-feather-external-link" />
-          </NavLink>
-          <NavLink to="/details" className="flexible aCenter">
-            Ինֆորմատիկա
-            <Icon className="icon-feather-external-link" />
-          </NavLink>
-          <NavLink to="/details" className="flexible aCenter">
-            Կիրառական Մեխանիկա
-            <Icon className="icon-feather-external-link" />
-          </NavLink>
+        <Paper className="documents-list flexible">
+          <Paper flexName="flexible vertical">
+            <h3>Քննական Առարկա</h3>
+            <Dropdown
+              label="Մաթեմատիկա"
+              data={[
+                { name: 'Գծային հանրահաշիվ' },
+                { name: 'Կիրառական Մաթեմատիկա' },
+                { name: 'Ինֆորմատիկա' },
+              ]}
+            />
+            <Dropdown
+              label="Մաթեմատիկա"
+              data={[
+                { name: 'Գծային հանրահաշիվ' },
+                { name: 'Կիրառական Մաթեմատիկա' },
+                { name: 'Ինֆորմատիկա' },
+              ]}
+            />
+          </Paper>
+          <Paper>
+            <h3>Ստուգարքային Առարկա</h3>
+            <Dropdown
+              label="Մաթեմատիկա"
+              data={[
+                { name: 'Գծային հանրահաշիվ' },
+                { name: 'Կիրառական Մաթեմատիկա' },
+                { name: 'Ինֆորմատիկա' },
+              ]}
+            />
+            <Dropdown
+              label="Մաթեմատիկա"
+              data={[
+                { name: 'Գծային հանրահաշիվ' },
+                { name: 'Կիրառական Մաթեմատիկա' },
+                { name: 'Ինֆորմատիկա' },
+              ]}
+            />
+          </Paper>
+          <Paper>
+            <h3>ԿԱ / ԿՆ</h3>
+            <Dropdown
+              label="Մաթեմատիկա"
+              data={[
+                { name: 'Գծային հանրահաշիվ' },
+                { name: 'Կիրառական Մաթեմատիկա' },
+                { name: 'Ինֆորմատիկա' },
+              ]}
+            />
+            <Dropdown
+              label="Մաթեմատիկա"
+              data={[
+                { name: 'Գծային հանրահաշիվ' },
+                { name: 'Կիրառական Մաթեմատիկա' },
+                { name: 'Ինֆորմատիկա' },
+              ]}
+            />
+          </Paper>
         </Paper>
       </Paper>
     )

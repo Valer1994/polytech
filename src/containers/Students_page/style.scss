@@ -12,6 +12,9 @@
     h3 {
       margin-bottom: 20px;
     }
+    > .paper {
+      width: 33.3%;
+    }
     a {
       margin-bottom: 10px;
       &:hover {
@@ -25,12 +28,13 @@
   .studentContainer {
       display: flex;
       justify-content: center;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
       max-width: 1100px;
       margin: 0 auto;
       .studentDataContainer{
-          display: flex;
+          display: block;
           align-items: center;
           justify-content: space-around;
           flex-wrap: wrap;

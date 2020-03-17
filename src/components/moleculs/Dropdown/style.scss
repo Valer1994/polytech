@@ -1,0 +1,13 @@
+.Dropdown {
+  margin-bottom: 15px;
+  &_label {
+    cursor: pointer;
+    margin-bottom: 10px;
+    .Icon {
+      margin-left: 10px;
+    }
+  }
+  &.content {
+
+  }
+}
